@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="media.css">
+  <title>Book Library</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #1a1a1d;
+      color: #c3073f;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-check-input:checked {
+      background: #c3073f;
+      border: 1px solid #c3073f;
+    }
+
+    .form-check-input:focus {
+      border-color: #c3073f;
+      outline: 0;
+      box-shadow: 0 0 0 0.05rem #c3073f;
+    }
+    .error-div {
+      width: 50%;
+      margin: 0rem auto;
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50% , 0%);
+      display: none;
+      color: white;
+      text-align: center;
+      padding: 0.3rem; 
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark d-flex justify-content-between px-4">
+    <div>
+      <a class="navbar-brand fs-3" href="#" style="color: #c3073f;">Book Library</a>
+    </div>
+    <form class="d-flex">
+      <input class="form-control me-2" id="search-box" type="search" placeholder="Search By Book Name.." aria-label="Search" style="box-shadow: none;">
+      <button class="btn btn-outline-danger" type="submit">Search</button>
+    </form>
+  </nav> -->
+  <div class="error-div"> </div>
+  <div class="container">
+    <h1 class="text-center my-5 text-uppercase fs-1">Book Library</h1>
+    <form action="#" class="w-50 mx-auto">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control text-danger your-name" id="floatingInput" autocomplete="off" placeholder="Your Name"
+          style="box-shadow: none" />
+        <label for="floatingInput">Your Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control text-danger book-name" id="floatingPassword" style="box-shadow: none" autocomplete="off" placeholder="Book Name"/>
+        <label for="floatingPassword">Book Name</label>
+      </div>
+      <div class="radio text-center p-4">
+        <div class="form-check d-inline-block mx-3">
+          <input class="form-check-input issue-radio" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked required/>
+          <label class="form-check-label" for="flexRadioDefault1">
+            Issue a Book
+          </label>
+        </div>
+        <div class="form-check d-inline-block mx-3">
+          <input class="form-check-input return-radio" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required/>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Return a Book
+          </label>
+        </div>
+      </div>
+      <div class="button text-center">
+        <button type="button" class="btn btn-danger pb-2 submit-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="container w-75 my-4">
+    <h3 class="text-center my-2 text-uppercase">Issued Books</h3>
+    <div class="no-book-issued">Nothing Here.. <p class="text-light">For Issue a New Book - Fill the upper Fields and click on Issue a book and then click submit.</p></div>
+    <div class="row w-100 text-center">
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>
