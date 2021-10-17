@@ -56,7 +56,6 @@ submitBtn.addEventListener("click", () => {
       books.push({ name: yourName.value, book: bookName.value });
       localStorage.setItem("books", JSON.stringify(books));
 
-      console.log(bookName.value.toLowerCase());
 
       let newBook = document.createElement("div");
       newBook.innerHTML = `<div class="card">
@@ -68,6 +67,13 @@ submitBtn.addEventListener("click", () => {
       newBook.classList.add("col-sm-4", "mb-4", "book-box");
       row.appendChild(newBook);
       books.push({ name: yourName.value, book: bookName.value });
+
+      if (row.innerText == "") {
+        nobookIssued.style.display = "block";
+      } else {
+        nobookIssued.style.display = "none";
+      }
+      
       //   localStorage.setItem("books", JSON.stringify(books));
     } else {
       Array.from(row.children).forEach((curr) => {
